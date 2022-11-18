@@ -1,30 +1,218 @@
  * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   
   body {
-    margin: 0;
-    font-weight: normal;
-    background-color:cyan;
-    display:flex;
+    /* margin: 0;
+    font-weight: 450;
+    font-family:Arial, Helvetica, sans-serif; */
+    background-color:blue;
+    /* display:flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    overflow: hidden;
+    overflow: hidden; */
   }
+
+  .start_bttn,
+  .rules_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s ease;
+  }
+
+  .start_bttn{
+    font-size: 27px;
+    font-weight: 500;
+    color: blue;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: aliceblue;
+    cursor: pointer;
+  }
+
+  /* .results,
+  .score-list, */
+  .rules_box{
+    display: none;
+    width: 540px;
+    background: white;
+    border-radius: 5px;
+  }
+
+  /* .rules_box.activePlace{
+    z-index: 5;
+    opacity: 0;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+  } */
+
+  
+  .rules_box .rules-heading {
+    height: 60px;
+    width: 100%;
+    border-bottom: 2px dotted grey;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* .results,
+  .score-list, */
+  .rules_box,
+  .rules-list {
+    padding: 15px 35px;
+  }
+
+  /* .results,
+  .score-list, */
+  .rules_box,
+  .rules-list,
+  .rules {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+
+  .results,
+  .score-list{
+    display: none;
+    margin: 80px auto;
+    height: 400px;
+    padding: 0 35px;
+    width: 540px;
+    background: white;
+    border-radius: 5px;
+  }
+
+  #rbr{
+    font-weight: 700;
+    color: red;
+  }
+
+
+  .bttns-strt {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding:0 35px;
+    border-top: 2px dotted grey;
+  }
+  .final-bttn,
+  .submit,
+  .bttns-strt button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: blue;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .bttns-strt button.exit {
+    color: aliceblue;
+    background: blue;
+  }
+
+  .bttns-strt button.restart {
+    color: blue;
+  }
+
+  button:hover {
+    background-color:grey;
+  }
+
+  button:focus {
+    outline: none;
+    background-color: darkblue;
+  }
+
   
   .container {
-    display: block;
+    display: none;
     margin: 80px auto;
+    border-radius: 5px;
     text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(100,100,100,1);
     width: 600px;
-    overflow: hidden;
     background-color:white;
-    padding-top: 20px;
   }
-  
+
+  .quizheader {
+    height: 70px;
+    padding: 0 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, .1);
+  }
+
+  .title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px    ;
+    height: 45px;
+    background: lightblue;
+    border-radius: 5px;
+    padding: 0 8px;
+  }
+
+  #timer_txt{
+    font-weight: 300;
+    font-size: 14px;
+    user-select: none;
+  }
+
+  #timer_time{
+    font-weight: 600;
+    font-size: 18px;
+    background: darkcyan;
+    height: 25px;
+    width: 45px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid darkcyan;
+    user-select: none;
+  }
+
+  section{
+    padding: 25px 30px 20px 30px;
+  }
+
+  .question_txt{
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  h3,
+  h4 {
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+
   .wrapper {
     padding-top: 20px;
   }
@@ -51,25 +239,6 @@
     cursor: pointer;
   }
 
-  button {
-    background-color: #6b9eac ;
-    color: #fff;
-    border: none;
-    display: block;
-    width: 100%;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 1.3em;
-    padding: 20px;
-  }
 
-  button:hover {
-    background-color:midnightblue;
-  }
-
-  button:focus {
-    outline: none;
-    background-color: greenyellow;
-  }
 
   

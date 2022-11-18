@@ -8,35 +8,100 @@
     <title>Do You Think You Can Code?</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container">
-          <h1>Do You Think You Can Code?</h1>
-          <h2>Press "Start" to Begin Quiz</h2>
-            <ul>
-                <li>
-                    <input name="answer" type="radio" id="a" class="answer">
-                    <label for="a" id="a_text"> Answer</label>
-                </li>
-                <li>
-                    <input name="answer" type="radio" id="b" class="answer">
-                    <label for="b" id="b_text"> Answer</label>
-                </li>
-                <li>
-                    <input name="answer" type="radio" id="c" class="answer">
-                    <label for="c" id="c_text"> Answer</label>
-                </li>
-                <li>
-                    <input name="answer" type="radio" id="d" class="answer">
-                    <label for="d" id="d_text"> Answer</label>
-                </li>
-            </ul>
+    <!-- Start Quiz Button -->
+        <div><button class="start_bttn">Start Quiz</button></div>
+        <!-- <div>
+            <h1>Do You Think You Can Code?</h1>
+        </div> -->
+    <!-- Rules Box -->
+        <div class="rules_box">
+            <div class="rules-heading">
+               <h3>Rules of the Quiz</h3>
+            </div>
+            <div class="rules-list">
+                <div class="rules">1. Try your best!</div>
+                <div class="rules">2. You will have <span id="rbr">16 seconds</span> per question.</div>
+                <div class="rules">3. Every answer you get <span id="rbr">incorrect</span>, time will be deducted.</div>
+                <div class="rules">4. All questions are multiple choice.</div>
+                <div class="rules">5. Never Give Up!</div>
+            </div>
+            <div class="bttns-strt">
+                <button class="exit">Go Back</button>
+                <button class="restart">Continue</button>
+            </div>
         </div>
-
-        
-        <button id="submit">Submit</button>
-        
-        
-    </div>
+        <div class="container" id="quiz">
+            <header class="quizheader">
+                <div class="title">Do You Think You Can Code?</div>
+                <div class="timer">
+                    <div id="timer_txt">Time Remaining</div>
+                    <div class="countdown" id="timer_time"></div>
+                </div>
+            </header>
+            <section id="quiz">
+                <div class="question_txt">
+                    <h3 id="question"></h3>
+                    <ul>
+                        <li>
+                            <input name="answer" type="radio" id="a" class="answer">
+                            <label for="a" id="a_text"> Answer</label>
+                        </li>
+                        <li>
+                            <input name="answer" type="radio" id="b" class="answer">
+                            <label for="b" id="b_text"> Answer</label>
+                        </li>
+                        <li>
+                            <input name="answer" type="radio" id="c" class="answer">
+                            <label for="c" id="c_text"> Answer</label>
+                        </li>
+                        <li>
+                            <input name="answer" type="radio" id="d" class="answer">
+                            <label for="d" id="d_text"> Answer</label>
+                        </li>
+                    </ul>
+                    <div class="w-r">
+                        <hr>
+                    </div>
+                    <div>
+                        <button class="submit">Next</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="results">
+            <div class="list">
+                <div class="rules-heading">
+                    <h3>Do You Think You Can Code?</h3>
+                    <h4>Results</h4>
+                </div>
+                <div id="quiz">
+                    <p>Enter Initial: <span class="fs"><input placeholder="initals" class="initial"></span></p>
+                        <button class="final-bttn" id="final-score">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="score-list">
+            <div class="list">
+                <div class="rules-heading">
+                    <h3> Do You Think You Can Code?</h3>
+                    <h4> High Scores</h4>
+                    <ol class="highscores"></ol>
+                    <button class="exit">Exit</button>
+                </div>
+            </div>
+        </div>
+            <!-- <footer>
+                <button class="next_bttn">Next Question</button>
+            </footer> -->
+            <!-- <div class="result-box">
+                <div class="icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="ending-txt">Congrats on completing the Quiz!</div>
+                <div class="score_txt"></div>
+            </div> -->
+        </div>
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
  <script src="./Assets/javascript/script.js"></script>   
 </body>
 </html>

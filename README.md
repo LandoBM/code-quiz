@@ -41,7 +41,7 @@ The following animation demonstrates the application functionality:
 
 ## Deployment
 ```
-
+https://landobm.github.io/code-quiz/
 ```
 ---
 
